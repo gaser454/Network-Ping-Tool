@@ -1,0 +1,10 @@
+const { exec } = require("child_process");
+
+exec("ping google.com", (error, stdout) => {
+    if (error) {
+        console.log("Ping failed");
+        return;
+    }
+
+    console.log(stdout);
+});
